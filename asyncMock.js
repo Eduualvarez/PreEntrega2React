@@ -1,7 +1,7 @@
 const productos = [
 
     {
-        id:1,
+        id:"1",
         name: "Iphone x",
         price:10000,
         category: "celulares",

@@ -5,16 +5,17 @@ export function Item({product})
 {
   return (
   
-    <div >
+    <div className="cardContainer">
        <h1>{product.name}</h1>
        <img id="imagenItem" src={product.img}/>
-       <p>{`$${product.price}`}</p>
-       <p>{`Stock: ${product.stock}`}</p>
+       <p >{`$${product.price}`}</p>
+       <p >{`Stock: ${product.stock}`}</p>
        <button type="subbmit">Agregar al carrito</button>
-       <Link to={`detail/${product.id}`}>Ver en detalle</Link>
+       <Link to={`item/${product.id}`}>Ver en detalle</Link>
        </div>
   
   )  
 };
+
 
 

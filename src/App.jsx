@@ -11,8 +11,8 @@ function App ()
             <Routes>
                 <Route exact path="/" element={ <ItemListContainer/> }/>
                 <Route exact path="/category/:categoryId" element={ <ItemListContainer/> }/>
-                <Route exact path="/detail/:ProductId" element={<ItemDetailContainer/>}/>
-              
+                <Route exact path="/item/:Id" element={<ItemDetailContainer/>}/>
+                <Route exacth path ="/category/:categoryId/item/:Id" element={<ItemDetailContainer/>}/>
                 <Route path="*" element={<h1>Not found 404</h1>}/>
             </Routes>
 
