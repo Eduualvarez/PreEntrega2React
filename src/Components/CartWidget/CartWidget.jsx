@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
 import "./CartWidget.css"
-
+import { useCart } from "../../hooks/useCart";
 
 
 function Carrito (){
+    const {totalQuantity} = useCart()
     return (<>
-        <label ><span id="cartTitle">Carrito</span><button >&#9660;</button></label>
-        <input  id ="cartNotification" value="0" disabled/>
+       <Link id="cartTitle" to="/cart">Carrito</Link>
+        <input  id ="cartNotification" value={totalQuantity} disabled/>
     </>)
 }
 export default Carrito;

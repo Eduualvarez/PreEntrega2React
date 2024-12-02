@@ -1,6 +1,8 @@
 import "./Item.css"
 import { Link } from "react-router-dom"
 
+
+
 export function Item({product})
 {
   return (

@@ -28,7 +28,7 @@ export function ItemListContainer()
           setProducts(products)
          })
          .catch((err)=>{
-          
+          console.log(err)
          })
        
     }, [categoryId])

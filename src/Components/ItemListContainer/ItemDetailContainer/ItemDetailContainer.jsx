@@ -19,7 +19,7 @@ const ItemDetailContainer = ()=>{
 
           const prod = {id: querySnapshot.id, ...querySnapshot.data()}
           setProduct(prod)
-          console.log(prod)
+         
         })
         .catch((err)=> {
           console.log(err)
