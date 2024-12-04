@@ -6,7 +6,7 @@ export default function Cart() {
   const {cart, clearCart, getTotal, totalQuantity} = useCart();
 
   const total = getTotal();
-
+  
   if(totalQuantity === 0){
     return <h1>No hay items en el carrito</h1>
   }
@@ -18,12 +18,15 @@ export default function Cart() {
       <h1>Carrito</h1>
       {cart.map((item)=> (
         <CartItem key={item.id} {...item}/>
+        
       ))}
       <h2>Total: ${total}</h2>
+      
       <div>
         <button onClick={clearCart} >Limpiar Carrito</button>
       </div>
       <Link to="/checkout" >Checkout</Link>
     </div>
+  
   );
 }

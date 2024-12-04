@@ -1,15 +1,19 @@
 import { ItemCount } from "../ItemCount/ItemCount";
 import "./ItemDetail.css"
-import { useState } from "react";
+import { useCart } from "../../../hooks/useCart";
 import { Link } from "react-router-dom";
 
 
-const ItemDetail=({img, name, stock, description, price})=>
+const ItemDetail=({id, img, name, stock, description, price, category})=>
     {
-        const [quantity, setQuantity]= useState(0);
-        const handleAdd = (cantidad)=>
+
+    const {addItem, IsInCart} = useCart()
+        const handleAdd = (count)=>
             {
-                setQuantity(cantidad)
+               const productToAdd = {
+                id, name, price, quantity: count
+               };
+               addItem(productToAdd)
             }
         
         return (
@@ -20,14 +24,19 @@ const ItemDetail=({img, name, stock, description, price})=>
             <p>Stock:<b>{stock}</b></p>
             <p>{description}</p>
             <p><b>${price}</b></p>
+            <p><b>Categoria: {category}</b></p>
+
            
 
             <div>
-        {quantity === 0 ? (
-          <ItemCount stock={stock} onAdd={handleAdd} />
-        ) : (
-          <Link to="/cart">Finalizar Compra</Link>
-        )}
+        {
+          IsInCart(id) ? (
+            <Link to="/cart">Ir al carrito</Link>
+          ):
+          (
+            <ItemCount stock = {stock} onAdd= {handleAdd}/>
+          )
+        }
       </div>
         </div>
 
