@@ -1,3 +1,4 @@
+import "./Cart.css"
 import { Link } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 import { useCart } from "../../hooks/useCart"
@@ -14,18 +15,20 @@ export default function Cart() {
 
 
   return (
-    <div>
+    <div className="cartContainer">
       <h1>Carrito</h1>
       {cart.map((item)=> (
         <CartItem key={item.id} {...item}/>
         
       ))}
-      <h2>Total: ${total}</h2>
+      <div className="total">
+      <p >Total: ${total}</p>
       
-      <div>
-        <button onClick={clearCart} >Limpiar Carrito</button>
+      
+        <button  id="clearCart" onClick={clearCart} >Limpiar Carrito</button>
+      
+      <Link className="checkout" to="/checkout" >Checkout</Link>
       </div>
-      <Link to="/checkout" >Checkout</Link>
     </div>
   
   );

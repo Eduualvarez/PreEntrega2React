@@ -1,0 +1,45 @@
+p
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+h2
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.itemContainer
+{
+    width: auto;
+    height: 50px;
+    margin: 10px 10px 0 10px;
+    border-radius: 5px;
+    border: solid black 3px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    column-gap: 2%;
+    align-items: center;
+    background: rgba(245, 216, 216, 0.479);
+    
+};
+
+
+.button-CartItem:hover
+{
+    background-color: bisque;
+   
+}
+
+.button-CartItem
+{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 25px;
+    width: 150px;
+    font-size: 15px;
+    background-color: #fff3e3a8;
+
+    
+
+};
