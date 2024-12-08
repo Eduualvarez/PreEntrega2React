@@ -1,10 +1,11 @@
 import "./Cart.css"
 import { Link } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
-import { useCart } from "../../hooks/useCart"
+import {useCart} from "../../hooks/useCart";
+
 
 export default function Cart() {
-  const {cart, clearCart, getTotal, totalQuantity} = useCart();
+  const {cart, clearCart, getTotal, totalQuantity} = useCart;
 
   const total = getTotal();
   
