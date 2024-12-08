@@ -14,7 +14,7 @@ export function Item({product})
        <p >{`$${product.price}`}</p>
        <p >{`Stock: ${product.stock}`}</p>
 
-       <button type="subbmit">Agregar al carrito</button>
+       
        
        <Link to={`/item/${product.id}`}>Ver en detalle</Link>
        </div>
