@@ -5,7 +5,7 @@ import {useCart} from "../../hooks/useCart";
 
 
 export default function Cart() {
-  const {cart, clearCart, getTotal, totalQuantity} = useCart;
+  const {cart, clearCart, getTotal, totalQuantity} = useCart();
 
   const total = getTotal();
   
